@@ -1,15 +1,11 @@
 import sqlite3
 
-import click
 from flask import current_app, g
 
 
-@click.command("init-db")
 def init_db():
     with open(current_app.config["SCHEMA_FILE"], encoding="utf-8") as f:
         get_db().executescript(f.read())
-
-    click.echo("Initialised the database")
 
 
 def get_db():
