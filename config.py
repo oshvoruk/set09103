@@ -5,3 +5,4 @@ BASE_DIR = Path(__file__).resolve().parent
 
 class Config:
     DATABASE = BASE_DIR / "instance" / "karasb.db"
+    SCHEMA_FILE = BASE_DIR / "schema.sql"
