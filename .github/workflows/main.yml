@@ -5,8 +5,12 @@ on:
     branches: [ "main", "develop" ]
 
 jobs:
-  checks:
+  api:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./karasb-api
 
     steps:
       - uses: actions/checkout@v7
