@@ -1,10 +1,10 @@
 from pathlib import Path
 
 import click
+from config import Config
 from flask import Flask
 
 from app.db import close_db, init_db
-from config import Config
 
 
 def create_app(test_config=None):
@@ -22,5 +22,9 @@ def create_app(test_config=None):
     def init_db_command():
         init_db()
         click.echo("initialised the database")
+
+    @app.get("/")
+    def index():
+        return app.send_static_file("index.html")
 
     return app
