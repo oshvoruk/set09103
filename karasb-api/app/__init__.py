@@ -5,6 +5,7 @@ from config import Config
 from flask import Flask
 
 from app.db import close_db, init_db
+from app.sites import sites_bp
 
 
 def create_app(test_config=None):
@@ -26,5 +27,7 @@ def create_app(test_config=None):
     @app.get("/")
     def index():
         return app.send_static_file("index.html")
+
+    app.register_blueprint(sites_bp)
 
     return app

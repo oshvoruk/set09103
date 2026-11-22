@@ -1,0 +1,16 @@
+@if (sites.value().length) {
+  <mgl-map
+    [mapStyle]="mapStyle"
+    [fitBounds]="bounds()"
+    [fitBoundsOptions]="{ padding: 120, maxZoom: 12 }"
+  >
+    @for (site of sites.value(); track site.id) {
+      <mgl-marker [lngLat]="[site.longitude, site.latitude]"></mgl-marker>
+    }
+  </mgl-map>
+} @else {
+  <nz-result
+    nzStatus="warning"
+    nzTitle="There are no sites to be displayed."
+  ></nz-result>
+}
