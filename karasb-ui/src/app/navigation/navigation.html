@@ -1,0 +1,48 @@
+<nz-header nz-row>
+  <img
+    nz-col
+    class="brand"
+    src="logo.svg"
+    width="32"
+  />
+  <div
+    nz-col
+    nzFlex="auto"
+  >
+    <ul
+      nz-menu
+      nzMode="horizontal"
+    >
+      <li
+        nz-menu-item
+        routerLink="/explore"
+        routerLinkActive="ant-menu-item-selected"
+      >
+        Explore
+      </li>
+
+      <li
+        nz-menu-item
+        routerLink="/compare"
+        routerLinkActive="ant-menu-item-selected"
+      >
+        Compare
+      </li>
+
+      <li
+        nz-menu-item
+        routerLink="/about"
+        routerLinkActive="ant-menu-item-selected"
+      >
+        About
+      </li>
+    </ul>
+  </div>
+  <!-- todo placeholder replace with real search -->
+  <div nz-col>
+    <input
+      nz-input
+      placeholder="Search..."
+    />
+  </div>
+</nz-header>
