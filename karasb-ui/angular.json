@@ -5,6 +5,11 @@
     "packageManager": "npm"
   },
   "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "less"
+    }
+  },
   "projects": {
     "karasb": {
       "projectType": "application",
@@ -46,7 +51,7 @@
             ],
             "styles": [
               "src/theme.less",
-              "src/styles.css",
+              "src/styles.less",
               "./node_modules/maplibre-gl/dist/maplibre-gl.css"
             ]
           },
